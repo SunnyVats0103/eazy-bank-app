@@ -33,12 +33,12 @@ public class CoreSecurityConfig {
     @Bean
     public UserDetailsService inMemoryUserDetails() {
         UserDetails user = User.withUsername("user")
-                .password("{bcrypt}}$2a$10$9ZeodU.V0.aM7ERAXEASl.10BODLYncRoKY5c/CaJ.4wfX5Owg/k.")
+                .password("{bcrypt}$2a$10$9ZeodU.V0.aM7ERAXEASl.10BODLYncRoKY5c/CaJ.4wfX5Owg/k.")
                 .authorities("read")
                 .build();
 
         UserDetails admin = User.withUsername("admin")
-                .password("{bcrypt}}$2a$10$F4qeM/mOvktHmwz5IC3ZG.f1XswNLqj/QRqo2g/3Ec8cai9KAGA5C")
+                .password("{bcrypt}$2a$10$F4qeM/mOvktHmwz5IC3ZG.f1XswNLqj/QRqo2g/3Ec8cai9KAGA5C")
                 .authorities("read", "write")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);
