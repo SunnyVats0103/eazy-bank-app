@@ -10,3 +10,12 @@ CREATE TABLE authorities (
         REFERENCES users (username)
 );
 create unique index ix_auth_username on authorities (username,authority);
+
+CREATE TABLE customer (
+    id int NOT NULL AUTO_INCREMENT,
+    username varchar(50) NOT NULL UNIQUE,
+    email varchar(100) NOT NULL,
+    pwd varchar(200) NOT NULL,
+    role varchar(50) NOT NULL,
+    PRIMARY KEY (id)
+);
