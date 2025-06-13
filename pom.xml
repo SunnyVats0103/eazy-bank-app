@@ -93,4 +93,20 @@
     </plugins>
   </build>
 
+  <!-- Profiles - dev, prod selection should change spring.profile.active value to profile value. -->
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <spring-boot.run.profiles>dev</spring-boot.run.profiles>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <spring-boot.run.profiles>prod</spring-boot.run.profiles>
+      </properties>
+    </profile>
+  </profiles>
+
 </project>
